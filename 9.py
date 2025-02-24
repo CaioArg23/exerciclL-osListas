@@ -1,14 +1,16 @@
-idD1 = int(input('digite o id do doce: '))
-idD2 = int(input('digite o id do doce: '))
-idD3 = int(input('digite o id do doce: '))
-idD4 = int(input('digite o id do doce: '))
-idD5 = int(input('digite o id do doce: '))
-idD6 = int(input('digite o id do doce: '))
-idD7 = int(input('digite o id do doce: '))
-idD8 = int(input('digite o id do doce: '))
-idD9 = int(input('digite o id do doce: '))
-idD10 = int(input('digite o id do doce: '))
+#Desenvolva um programa que informa a nota de um(a) aluno(a) de acordo com suas respostas. 
+# Ele deve pedir a resposta desse(a) aluno(a) para cada questão e é preciso verificar se a resposta foi igual ao gabarito. 
+# Cada questão vale um ponto e existem as alternativas A, B, C ou D.
+respostas = [] 
 
-lista = [idD1, idD2, idD3, idD4, idD5, idD6, idD7, idD8, idD9, idD10]
-coco = lista.len()
-print(coco)
+gabarito = ['D', 'A', 'C', 'B', 'A', 'D', 'C', 'C', 'A', 'B']
+nota = 0
+
+for i in range(0, 10):
+  respostas.append(input(f'Insira a resposta da questão {i + 1}: ').upper())
+
+for i in range(0,10):
+  if respostas[i] == gabarito[i]:
+    nota += 1
+
+print(f'Nota final: {nota}')
